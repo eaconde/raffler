@@ -3,9 +3,7 @@ class Raffler.Collections.Entries extends Backbone.Collection
   model: Raffler.Models.Entry
 
   drawWinner: ->
-    console.log @
+    # TODO: limit to one time winner only
     winner = @shuffle()[0]
-    if winner
-      winner.set(winner: true)
-      winner.save()
-      winner.trigger('focus')
+    console.log typeof winner
+    winner.getWinner() if winner

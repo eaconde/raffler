@@ -13,3 +13,6 @@ I'm doing this in [Rails 4.2](http://rubyonrails.org/) (video was in 3.2) with [
 ...The video didn't specify the method for the form. However when I tried the same code, it used `GET`. Simply adding the `method="post"` to the form should resolve the problem.
 
 **NOTE:** After submitting a new entry, the form will automatically `reset()` the content of the input.
+
+3. Backbone Scaffold
+...Generating a scaffold will already append the `model: Raffler.Models.Entry` to the **entry.js.coffee** file unlike in the video wherein it has to be manually added.
