@@ -1,3 +1,2 @@
-<div id="container" class="">
-  Loading...
-</div>
+<!--  TODO: implement scope to exclude dates from content-->
+<%= content_tag "div", "Loading...", id: "container", data: { entries: Entry.all } %>

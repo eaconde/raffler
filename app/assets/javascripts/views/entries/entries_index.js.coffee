@@ -12,12 +12,12 @@ class Raffler.Views.EntriesIndex extends Backbone.View
 
   render: ->
     $(@el).html(@template())
-    @collection.each(@appendEntry)
+    @collection.each(@appendEntry, this)
     this # or @
 
   appendEntry: (entry) ->
     view = new Raffler.Views.Entry(model: entry)
-    $('#entries').append(view.render().el)
+    @$('#entries').append(view.render().el)
 
   createEntry: (event) ->
     event.preventDefault()
