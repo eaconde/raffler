@@ -1,3 +1,10 @@
+@mixin colored-button {
+  background-color: #5b288f;
+  color: white;
+  border-radius: 5px;
+  padding: 3px;
+}
+
 
 body {
   background-color: #202020 !important;
@@ -44,11 +51,20 @@ body {
     & > input[type="submit"] {
       width: 20%;
       float: right;
-      background-color: #5b288f;
-      color: white;
-      border-radius: 5px;
+      @include colored-button;
     }
 
+  }
+
+  .winner {
+    float: right;
+    color: #ccc
+  }
+
+  #draw {
+    width: 100px;
+    margin-top: 20px;
+    @include colored-button;
   }
 
 }

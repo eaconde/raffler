@@ -4,6 +4,7 @@ class Raffler.Views.EntriesIndex extends Backbone.View
 
   events:
     'submit #new_entry': 'createEntry'
+    'click #draw': 'drawWinner'
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -31,3 +32,7 @@ class Raffler.Views.EntriesIndex extends Backbone.View
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
         alert "#{attribute} #{message}" for message in messages
+
+  drawWinner: (event) ->
+    event.preventDefault()
+    @collection.drawWinner()

@@ -7,3 +7,5 @@
 
 <ul id="entries">
 </ul>
+
+<button type="button" name="button" id="draw">Draw Winner</button>
