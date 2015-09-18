@@ -3,6 +3,9 @@ class Raffler.Views.Entry extends Backbone.View
   template: JST['entries/entry']
   tagName: 'li'
 
+  events:
+    'click': 'showEntry'
+
   initialize: ->
     @model.on('change', @render, this)
     @model.on('focus', @focusWinner, this)
@@ -16,3 +19,6 @@ class Raffler.Views.Entry extends Backbone.View
     # hence, not all .winner will be affected
     $('.winner').removeClass('highlight')
     @$('.winner').addClass('highlight')
+
+  showEntry: ->
+    Backbone.history.navigate("/entries/#{@model.get('id')}", true)
