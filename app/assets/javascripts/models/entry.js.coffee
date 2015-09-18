@@ -6,7 +6,9 @@ class Raffler.Models.Entry extends Backbone.Model
     @trigger('focus')
 
   resetEntry: ->
-    console.log @get('winner')
     if @get('winner')
       @set(winner: false)
       @save()
+
+  deleteEntry: ->
+    @destroy()

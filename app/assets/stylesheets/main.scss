@@ -71,7 +71,7 @@ body {
     @include colored-button;
   }
 
-  #reset {
+  #resetWinners, #resetRaffle {
     margin-top: 20px;
     float: right;
     @include colored-button;
