@@ -9,3 +9,4 @@
 </ul>
 
 <button type="button" name="button" id="draw">Draw Winner</button>
+<button type="button" name="button" id="reset">Reset Raffle</button>

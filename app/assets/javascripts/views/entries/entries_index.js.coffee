@@ -5,6 +5,7 @@ class Raffler.Views.EntriesIndex extends Backbone.View
   events:
     'submit #new_entry': 'createEntry'
     'click #draw': 'drawWinner'
+    'click #reset': 'resetRaffle'
 
   initialize: ->
     @collection.on('reset', @render)
@@ -36,3 +37,7 @@ class Raffler.Views.EntriesIndex extends Backbone.View
   drawWinner: (event) ->
     event.preventDefault()
     @collection.drawWinner()
+
+  resetRaffle: (event) ->
+    event.preventDefault()
+    @collection.resetRaffle()
