@@ -1,0 +1,4 @@
+
+<p><strong>Name:</strong> <%= @entry.get('name') %></p>
+<p><strong>Entry ID:</strong> <%= @entry.get('id') %></p>
+<button type="button" name="button" id="return_home">Home</button>

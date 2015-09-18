@@ -12,4 +12,5 @@ class Raffler.Routers.Entries extends Backbone.Router
     $('#container').html(view.render().el)
 
   show: (id) ->
-    alert "Entry #{id}"
+    view = new Raffler.Views.EntryDetails(model: @collection.get(id))
+    $('#container').html(view.render().el)

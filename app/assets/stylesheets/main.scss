@@ -72,4 +72,10 @@ body {
     @include colored-button;
   }
 
+  #return_home {
+    width: 100px;
+    margin-top: 20px;
+    @include colored-button;
+  }
+
 }
